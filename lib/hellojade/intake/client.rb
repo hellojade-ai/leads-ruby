@@ -20,7 +20,7 @@ module Hellojade
     class Client
       DEFAULT_BASE_URL = "https://intake.hellojade.ai"
       DEFAULT_TIMEOUT = 20
-      DEFAULT_USER_AGENT = "hellojade-intake-ruby/#{VERSION}"
+      DEFAULT_USER_AGENT = "hellojade-intake-ruby/#{VERSION}".freeze
 
       INTAKE_PATH = "/v1/intake"
       VOCABULARY_PATH = "/v1/vocabulary"

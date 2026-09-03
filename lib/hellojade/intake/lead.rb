@@ -73,8 +73,8 @@ module Hellojade
       # in +extra+.
       def self.from_h(hash)
         h = hash.transform_keys(&:to_sym)
-        extra = h.reject { |k, _| FIELDS.include?(k) }.transform_keys(&:to_s)
-        modeled = h.select { |k, _| FIELDS.include?(k) }
+        extra = h.except(*FIELDS).transform_keys(&:to_s)
+        modeled = h.slice(*FIELDS)
         new(**modeled, extra: extra)
       end
     end

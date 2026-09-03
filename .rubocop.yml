@@ -25,8 +25,12 @@ Metrics/ParameterLists:
 Metrics/PerceivedComplexity:
   Enabled: false
 Metrics/BlockLength:
+  Enabled: false
+Naming/FileName:
   Exclude:
-    - "test/**/*"
+    - "lib/hellojade-intake.rb"
+Naming/VariableNumber:
+  CheckMethodNames: false
 Naming/MethodParameterName:
   MinNameLength: 1
 Gemspec/RequireMFA:

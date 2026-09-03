@@ -7,7 +7,7 @@ require "webrick"
 # request pops the next one and is recorded so headers and bodies can be
 # asserted. Nothing here talks to the real API.
 class StubServer
-  Request = Struct.new(:method, :path, :headers, :body, keyword_init: true) do
+  Request = Struct.new(:http_method, :path, :headers, :body, keyword_init: true) do
     def json
       JSON.parse(body)
     end
@@ -50,7 +50,7 @@ class StubServer
     headers = {}
     req.each { |k, v| headers[k.downcase] = v }
     @mutex.synchronize do
-      @requests << Request.new(method: req.request_method, path: req.path, headers: headers, body: req.body.to_s)
+      @requests << Request.new(http_method: req.request_method, path: req.path, headers: headers, body: req.body.to_s)
     end
     scripted = begin
       @responses.pop(true)

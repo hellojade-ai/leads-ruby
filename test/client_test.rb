@@ -44,7 +44,7 @@ class ClientTest < Minitest::Test
     assert_equal "acme/req/1", res.request_id
 
     req = @stub.requests.fetch(0)
-    assert_equal "POST", req.method
+    assert_equal "POST", req.http_method
     assert_equal "/v1/intake", req.path
     assert_equal TEST_KEY, req.headers["x-api-key"]
     assert_equal "acme-leads:A-99812", req.headers["idempotency-key"]
@@ -225,7 +225,7 @@ class ClientTest < Minitest::Test
     assert res.accepted?
     assert_equal [1.0], @sleeper.calls
     sleep 1.1 # let the slow handler finish before the stub is shut down
-    assert_equal ["acme:1", "acme:1"], @stub.requests.map { |r| r.headers["idempotency-key"] }
+    assert_equal(["acme:1", "acme:1"], @stub.requests.map { |r| r.headers["idempotency-key"] })
   end
 
   def test_no_retry_policy_makes_exactly_one_attempt
@@ -279,7 +279,7 @@ class ClientTest < Minitest::Test
     assert_equal %w[replacement repair remodel maintain], v.project_service
     assert_equal %w[first_name last_name phone], v.required
     req = @stub.requests.fetch(0)
-    assert_equal "GET", req.method
+    assert_equal "GET", req.http_method
     assert_equal "/v1/vocabulary", req.path
     assert_nil req.headers["x-api-key"]
   end
