@@ -27,8 +27,6 @@ Metrics/PerceivedComplexity:
 Metrics/BlockLength:
   Exclude:
     - "test/**/*"
-Minitest/MultipleAssertions:
-  Enabled: false
 Naming/MethodParameterName:
   MinNameLength: 1
 Gemspec/RequireMFA:
