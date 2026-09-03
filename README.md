@@ -15,14 +15,14 @@ hellojade customer, durably, with idempotency and sane retries built in.
 | OpenAPI 3.0 contract | <https://intake.hellojade.ai/api/openapi.json> |
 | Integration brief (the eight rules) | <https://intake.hellojade.ai/api/INTEGRATION.md> |
 | Becoming a lead provider | <https://hellojade.ai/developers/provide-leads> |
-| Other kits | [PHP](https://github.com/hellojade-ai/hellojade-php) · [Java](https://github.com/hellojade-ai/hellojade-java) · [.NET](https://github.com/hellojade-ai/hellojade-dotnet) |
+| Other kits | [PHP](https://github.com/hellojade-ai/leads-php) · [Java](https://github.com/hellojade-ai/leads-java) · [.NET](https://github.com/hellojade-ai/leads-dotnet) |
 
 ## Install
 
 The gem is distributed from GitHub, not RubyGems. In your `Gemfile`:
 
 ```ruby
-gem "hellojade-intake", git: "https://github.com/hellojade-ai/hellojade-ruby", tag: "v0.1.0"
+gem "hellojade-intake", git: "https://github.com/hellojade-ai/leads-ruby", tag: "v0.1.0"
 ```
 
 Or build it locally: `gem build hellojade-intake.gemspec && gem install ./hellojade-intake-0.1.0.gem`.

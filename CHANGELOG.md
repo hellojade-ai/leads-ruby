@@ -20,4 +20,4 @@ All notable changes to this gem are recorded here. The format follows
 - Minitest suite against a local WEBrick stub covering every documented status.
 - CI on Ruby 3.1, 3.2, 3.3 and 3.4.
 
-[0.1.0]: https://github.com/hellojade-ai/hellojade-ruby/releases/tag/v0.1.0
+[0.1.0]: https://github.com/hellojade-ai/leads-ruby/releases/tag/v0.1.0

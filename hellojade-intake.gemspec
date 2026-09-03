@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Ruby client for the hellojade Partner Intake API"
   spec.description = "Submit leads to https://intake.hellojade.ai with idempotency, " \
                      "Retry-After-aware retries, and typed errors. Net::HTTP only, no runtime dependencies."
-  spec.homepage = "https://github.com/hellojade-ai/hellojade-ruby"
+  spec.homepage = "https://github.com/hellojade-ai/leads-ruby"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0"
 

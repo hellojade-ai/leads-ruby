@@ -19,8 +19,8 @@ Thanks for helping partners send leads correctly.
 ## Setup
 
 ```sh
-git clone https://github.com/hellojade-ai/hellojade-ruby
-cd hellojade-ruby
+git clone https://github.com/hellojade-ai/leads-ruby
+cd leads-ruby
 bundle install
 bundle exec rake test
 bundle exec rubocop
